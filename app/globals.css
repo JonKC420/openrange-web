@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --bg0: #050814;
+  --bg1: #070b19;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 800px at 20% 10%, rgba(249, 115, 22, 0.15), transparent 60%),
+    radial-gradient(900px 700px at 80% 30%, rgba(99, 102, 241, 0.14), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  color: #e5e7eb;
+}
+
+/* Quality-of-life */
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: none; }
+
+.glow {
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.22), 0 30px 120px rgba(249, 115, 22, 0.12);
+}
