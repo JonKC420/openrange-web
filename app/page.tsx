@@ -26,7 +26,7 @@ export default function Page() {
           <GetStarted />
         </Section>
 
-        <Section id="roadmap" title="Roadmap" subtitle="Clear milestones. Ship fast. Keep it real.">
+        <Section id="roadmap" title="Roadmap" subtitle="Transparent progress. Practical execution">
           <Roadmap />
         </Section>
 
