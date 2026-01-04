@@ -153,10 +153,11 @@ function Hero() {
             Live PoW chain • L1 + L2
           </span>
 
-          <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-            Proof-of-Work
-            <span className="block text-slate-300">For The Open Frontier.</span>
-          </h1>
+         <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+          Proof-of-Work,
+          <span className="block text-slate-300">Done Right.</span>
+        </h1>
+
 
           <p className="mt-5 text-base md:text-lg text-slate-300 max-w-xl leading-relaxed">
             Open Range is a two-layer system designed for{" "}
