@@ -159,9 +159,9 @@ function Hero() {
             Live PoW chain • L1 + L2
           </span>
 
-         <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-          Proof-of-Work,
-          <span className="block text-slate-300">Done Right.</span>
+       <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+        Proof-of-Work
+        <span className="block text-slate-300">Done Right!</span>
         </h1>
 
 
