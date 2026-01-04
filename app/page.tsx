@@ -90,7 +90,8 @@ function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-3">
           {/* Emblem */}
-          <div className="h-10 w-10 rounded-xl overflow-hidden ring-1 ring-orange-400/30 bg-black/60 grid place-items-center">
+          <div className="h-14 w-14 md:h-14 md:w-14 rounded-2xl overflow-hidden ring-1 ring-orange-400/30 bg-black/60 grid place-items-center">
+
             {logoOk ? (
               <img
                 src="/openrange-emblem.png"
@@ -321,7 +322,7 @@ SKIP_WASM_BUILD=1 cargo build -p solochain-template-node --release
 cd openrange-miner
 npm i
 node miner.js --ws $OPR_RPC`}
-        foot={<>Tip: keep node + miner on separate machines once you go public.</>}
+        foot={<></>}
       />
 
       <div className="md:col-span-2 rounded-3xl bg-black/25 p-6">
