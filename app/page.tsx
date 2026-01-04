@@ -21,7 +21,7 @@ export default function Page() {
         <Section
           id="get-started"
           title="Get started"
-          subtitle="Run an OPR Node, Then Point Your Miner at Your RPC. Replace Placeholders With Your Official Release Links When Ready."
+          subtitle= "Run an OPR node, then point your miner at your RPC. We’ll replace the placeholders with official release links closer to launch."
         >
           <GetStarted />
         </Section>
