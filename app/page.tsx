@@ -156,10 +156,15 @@ function Hero() {
           </h1>
 
           <p className="mt-5 text-base md:text-lg text-slate-300 max-w-xl leading-relaxed">
-            <span className="text-white font-semibold">OPR</span> Proof of Work Blockchain Built So Everyday Miners Can
-            Participate Using Common Hardware.
-            <span className="text-white font-semibold"> OPRX</span> is The Fast Execution Layer For DeFi — Without Slowing
-            The Base Chain Down.
+            Open Range is a two-layer system designed for{" "}
+            <span className="text-white font-semibold">security</span>,{" "}
+            <span className="text-white font-semibold">scalability</span>, and{" "}
+            <span className="text-white font-semibold">clarity</span>.
+            <br />
+            <span className="text-white font-semibold">OPR</span> anchors the network with Proof-of-Work, while{" "}
+            <span className="text-white font-semibold">OPRX</span> enables fast execution for{" "}
+            <span className="text-white font-semibold">DeFi</span> and{" "}
+            <span className="text-white font-semibold">peer-to-peer transactions</span>.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -204,7 +209,7 @@ function Hero() {
           <div className="mt-6 rounded-2xl bg-black/30 p-5">
             <div className="text-xs text-slate-300">One-liner for X</div>
             <div className="mt-2 text-sm text-white">
-              Open Range is Live PoW (OPR) + A Fast L2 (OPRX). Explorer + Public Testnet Ext.
+              Open Range is Live PoW (OPR) + a Fast L2 (OPRX). Explorer + Public Testnet next.
             </div>
           </div>
         </div>
@@ -233,6 +238,7 @@ function FlowRow({ left, mid, right }: { left: string; mid: string; right: strin
     </div>
   );
 }
+
 
 /* ---------- sections ---------- */
 
