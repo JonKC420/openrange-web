@@ -202,31 +202,31 @@ function Hero() {
 
         {/* Right card */}
         <div className="rounded-3xl bg-gradient-to-b from-white/[0.07] to-white/[0.03] p-7 md:p-9 backdrop-blur shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
-          <div className="flex items-center justify-between">
-            <div className="text-sm font-semibold text-white">Network Snapshot</div>
-            <div className="text-xs text-slate-300">dev/local now • testnet next</div>
-          </div>
+  <div className="flex items-center justify-between">
+    <div className="text-sm font-semibold text-white">Network Snapshot</div>
+    <div className="text-xs text-slate-300">dev/local now • testnet next</div>
+  </div>
 
-          <div className="mt-6 rounded-3xl bg-black/25 p-6">
-            <div className="text-xs text-slate-300">OPR → OPRX Flow</div>
-            <div className="mt-3 grid gap-3">
-              <FlowRow left="OPR (L1)" mid="Deposit" right="OPRX (L2)" />
-              <FlowRow left="Mine PoW" mid="Settle" right="Fast Tx / DeFi" />
-              <FlowRow left="Security" mid="Withdraw" right="Execution" />
-            </div>
-          </div>
+  <div className="mt-6 rounded-3xl bg-black/25 p-6">
+    <div className="mb-3 text-sm font-semibold text-white">
+      Settlement → Execution
+    </div>
 
-          <div className="mt-6 rounded-2xl bg-black/30 p-5">
-            <div className="text-xs text-slate-300">One-liner for X</div>
-            <div className="mt-2 text-sm text-white">
-              Open Range is Live PoW (OPR) + a Fast L2 (OPRX). Explorer + Public Testnet next.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+    <div className="grid gap-3">
+      <FlowRow left="OPR (L1)" mid="Deposit" right="OPRX (L2)" />
+      <FlowRow left="Mine PoW" mid="Settle" right="Fast Tx / DeFi" />
+      <FlowRow left="Security" mid="Withdraw" right="Execution" />
+    </div>
+  </div>
+
+  <div className="mt-6 rounded-2xl bg-black/30 p-5">
+    <div className="text-xs text-slate-300">One-liner for X</div>
+    <div className="mt-2 text-sm text-white">
+      Open Range is Live PoW (OPR) + a Fast L2 (OPRX). Explorer + Public Testnet next.
+    </div>
+  </div>
+</div>
+
 
 function MiniStat({ k, v }: { k: string; v: string }) {
   return (
