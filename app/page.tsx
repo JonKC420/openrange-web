@@ -211,7 +211,7 @@ function Hero() {
         <div className="rounded-3xl bg-gradient-to-b from-white/[0.07] to-white/[0.03] p-7 md:p-9 backdrop-blur shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
           <div className="flex items-center justify-between">
             <div className="text-sm font-semibold text-white">Network Snapshot</div>
-            <div className="text-xs text-slate-300">dev/local now • testnet next</div>
+            <div className="text-xs text-slate-300"></div>
           </div>
 
           <div className="mt-6 rounded-3xl bg-black/25 p-6">
