@@ -330,14 +330,14 @@ node miner.js --ws $OPR_RPC`}
         foot={<></>}
       />
 
-      <div className="md:col-span-2 rounded-3xl bg-black/25 p-6">
-        <div className="text-sm font-semibold text-white">What’s next</div>
-        <p className="mt-2 text-slate-300">
-          We’ll add real download buttons (Linux/Windows), checksums, and quick-start scripts once your release builds
-          are ready.
-        </p>
-      </div>
-    </div>
+    <div className="md:col-span-2 rounded-3xl bg-black/25 p-6">
+  <div className="text-sm font-semibold text-white">Next steps</div>
+  <p className="mt-2 text-slate-300">
+    Verified downloads (Linux/Windows), checksums, and quick-start scripts will be published with the first public testnet release.
+  </p>
+</div>
+
+
   );
 }
 
