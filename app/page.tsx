@@ -12,16 +12,15 @@ export default function Page() {
         <Section
           id="how"
           title="How OPR + OPRX work together"
-                    subtitle="Secure PoW settlement on L1. Fast execution on L2. Two layers. One clean system."
-          >
-
+          subtitle="Secure PoW settlement on L1. Fast execution on L2. Two layers. One clean system."
+        >
           <HowItWorks />
         </Section>
 
         <Section
           id="get-started"
           title="Get started"
-          subtitle= "Run an OPR node, then point your miner at your RPC. We’ll replace the placeholders with official release links closer to launch."
+          subtitle="Run an OPR node, then point your miner at your RPC. We’ll replace the placeholders with official release links closer to launch."
         >
           <GetStarted />
         </Section>
@@ -30,8 +29,7 @@ export default function Page() {
           id="roadmap"
           title="Roadmap"
           subtitle="Clear milestones. Transparent progress. Practical execution."
-            >
-
+        >
           <Roadmap />
         </Section>
 
@@ -56,12 +54,15 @@ function Section({
 }) {
   return (
     <section id={id} className="mt-24 md:mt-32">
-      {/* removed ring; added gradient + shadow so it feels like a real section card */}
       <div className="rounded-3xl bg-gradient-to-b from-white/[0.07] to-white/[0.03] p-7 md:p-10 backdrop-blur-md shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white tracking-tight">{title}</h2>
-            {subtitle ? <p className="mt-2 max-w-2xl text-slate-300">{subtitle}</p> : null}
+            <h2 className="text-2xl md:text-3xl font-semibold text-white tracking-tight">
+              {title}
+            </h2>
+            {subtitle ? (
+              <p className="mt-2 max-w-2xl text-slate-300">{subtitle}</p>
+            ) : null}
           </div>
 
           <div className="mt-4 md:mt-0 flex flex-wrap gap-2 text-xs text-slate-300">
@@ -94,9 +95,7 @@ function Header() {
     <header className="sticky top-0 z-30 bg-black/45 backdrop-blur border-b border-white/10">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-3">
-          {/* Emblem */}
           <div className="h-14 w-14 md:h-14 md:w-14 rounded-2xl overflow-hidden ring-1 ring-orange-400/30 bg-black/60 grid place-items-center">
-
             {logoOk ? (
               <img
                 src="/openrange-emblem.png"
@@ -110,8 +109,12 @@ function Header() {
           </div>
 
           <div>
-            <div className="text-sm font-semibold text-white leading-tight">Open Range</div>
-            <div className="text-xs text-slate-400 leading-tight">OPR (L1) • OPRX (L2)</div>
+            <div className="text-sm font-semibold text-white leading-tight">
+              Open Range
+            </div>
+            <div className="text-xs text-slate-400 leading-tight">
+              OPR (L1) • OPRX (L2)
+            </div>
           </div>
         </a>
 
@@ -159,11 +162,10 @@ function Hero() {
             Live PoW chain • L1 + L2
           </span>
 
-       <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-        Proof-of-Work
-        <span className="block text-slate-300">Done Right!</span>
-        </h1>
-
+          <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+            Proof-of-Work
+            <span className="block text-slate-300">Done Right!</span>
+          </h1>
 
           <p className="mt-5 text-base md:text-lg text-slate-300 max-w-xl leading-relaxed">
             Open Range is a two-layer system designed for{" "}
@@ -171,10 +173,15 @@ function Hero() {
             <span className="text-white font-semibold">scalability</span>, and{" "}
             <span className="text-white font-semibold">clarity</span>.
             <br />
-            <span className="text-white font-semibold">OPR</span> anchors the network with Proof-of-Work, while{" "}
-            <span className="text-white font-semibold">OPRX</span> enables fast execution for{" "}
+            <span className="text-white font-semibold">OPR</span> anchors the
+            network with Proof-of-Work, while{" "}
+            <span className="text-white font-semibold">OPRX</span> enables fast
+            execution for{" "}
             <span className="text-white font-semibold">DeFi</span> and{" "}
-            <span className="text-white font-semibold">peer-to-peer transactions</span>.
+            <span className="text-white font-semibold">
+              peer-to-peer transactions
+            </span>
+            .
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -202,31 +209,35 @@ function Hero() {
 
         {/* Right card */}
         <div className="rounded-3xl bg-gradient-to-b from-white/[0.07] to-white/[0.03] p-7 md:p-9 backdrop-blur shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
-  <div className="flex items-center justify-between">
-    <div className="text-sm font-semibold text-white">Network Snapshot</div>
-    <div className="text-xs text-slate-300">dev/local now • testnet next</div>
-  </div>
+          <div className="flex items-center justify-between">
+            <div className="text-sm font-semibold text-white">Network Snapshot</div>
+            <div className="text-xs text-slate-300">dev/local now • testnet next</div>
+          </div>
 
-  <div className="mt-6 rounded-3xl bg-black/25 p-6">
-    <div className="mb-3 text-sm font-semibold text-white">
-      Settlement → Execution
-    </div>
+          <div className="mt-6 rounded-3xl bg-black/25 p-6">
+            <div className="mb-3 text-sm font-semibold text-white">
+              Settlement → Execution
+            </div>
 
-    <div className="grid gap-3">
-      <FlowRow left="OPR (L1)" mid="Deposit" right="OPRX (L2)" />
-      <FlowRow left="Mine PoW" mid="Settle" right="Fast Tx / DeFi" />
-      <FlowRow left="Security" mid="Withdraw" right="Execution" />
-    </div>
-  </div>
+            <div className="grid gap-3">
+              <FlowRow left="OPR (L1)" mid="Deposit" right="OPRX (L2)" />
+              <FlowRow left="Mine PoW" mid="Settle" right="Fast Tx / DeFi" />
+              <FlowRow left="Security" mid="Withdraw" right="Execution" />
+            </div>
+          </div>
 
-  <div className="mt-6 rounded-2xl bg-black/30 p-5">
-    <div className="text-xs text-slate-300">One-liner for X</div>
-    <div className="mt-2 text-sm text-white">
-      Open Range is Live PoW (OPR) + a Fast L2 (OPRX). Explorer + Public Testnet next.
-    </div>
-  </div>
-</div>
-
+          <div className="mt-6 rounded-2xl bg-black/30 p-5">
+            <div className="text-xs text-slate-300">One-liner for X</div>
+            <div className="mt-2 text-sm text-white">
+              Open Range is Live PoW (OPR) + a Fast L2 (OPRX). Explorer + Public
+              Testnet next.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function MiniStat({ k, v }: { k: string; v: string }) {
   return (
@@ -237,7 +248,15 @@ function MiniStat({ k, v }: { k: string; v: string }) {
   );
 }
 
-function FlowRow({ left, mid, right }: { left: string; mid: string; right: string }) {
+function FlowRow({
+  left,
+  mid,
+  right,
+}: {
+  left: string;
+  mid: string;
+  right: string;
+}) {
   return (
     <div className="flex items-center justify-between rounded-xl bg-black/25 px-4 py-3">
       <span className="text-sm font-semibold text-white">{left}</span>
@@ -249,7 +268,6 @@ function FlowRow({ left, mid, right }: { left: string; mid: string; right: strin
   );
 }
 
-
 /* ---------- sections ---------- */
 
 function HowItWorks() {
@@ -258,23 +276,23 @@ function HowItWorks() {
       <Step
         n="01"
         title="Mine & Secure OPR (L1)"
-        text="OPR Stays Focused on PoW Security and Settlement. Stable Block Production, Fair Mining, Simple Core Layer."
+        text="OPR stays focused on PoW security and settlement. Stable block production, fair mining, simple core layer."
       />
       <Step
         n="02"
-        title="Move Value into OPRX (L2)"
-        text="Deposit/Bridge into OPRX to Unlock Low-Cost Transfers, Swaps, and DeFi Activity at High Speed."
+        title="Move value into OPRX (L2)"
+        text="Deposit/bridge into OPRX to unlock low-cost transfers, swaps, and DeFi activity at high speed."
       />
       <Step
         n="03"
-        title="Withdraw Back to PoW Settlement"
-        text="When You Need L1 Settlement, Withdraw Back to OPR — Anchored by PoW Finality."
+        title="Withdraw back to PoW settlement"
+        text="When you need L1 settlement, withdraw back to OPR — anchored by PoW finality."
       />
 
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6">
         <div className="text-sm font-semibold text-white">Simple mental model</div>
         <p className="mt-2 text-slate-300">
-          <span className="font-semibold text-white">OPR</span> = Secure settlement •{" "}
+          <span className="font-semibold text-white">OPR</span> = secure settlement •{" "}
           <span className="font-semibold text-white">OPRX</span> = fast execution for DeFi.
         </p>
       </div>
@@ -297,7 +315,6 @@ function Step({ n, title, text }: { n: string; title: string; text: string }) {
 function GetStarted() {
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      {/* calm testnet notice inside this section */}
       <div className="md:col-span-2 rounded-2xl bg-orange-500/10 p-4 ring-1 ring-orange-400/20">
         <div className="text-sm font-semibold text-orange-200">Testnet notice</div>
         <p className="mt-1 text-sm text-slate-200">
@@ -332,7 +349,8 @@ node miner.js --ws $OPR_RPC`}
       <div className="md:col-span-2 rounded-3xl bg-black/25 p-6">
         <div className="text-sm font-semibold text-white">Next steps</div>
         <p className="mt-2 text-slate-300">
-          Verified downloads (Linux/Windows), checksums, and quick-start scripts will be published with the first public testnet release.
+          Verified downloads (Linux/Windows), checksums, and quick-start scripts will be published with the first public
+          testnet release.
         </p>
       </div>
     </div>
