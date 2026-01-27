@@ -202,7 +202,7 @@ function Hero() {
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             <MiniStat k="Consensus" v="Proof-of-Work (OPR)" />
             <MiniStat k="Execution" v="Fast L2 (OPRX)" />
-            <MiniStat k="Supply" v="50M cap (OPR)" />
+            <MiniStat k="Supply" v="56M cap (OPR)" />
             <MiniStat k="Blocks" v="~3 minutes target" />
           </div>
         </div>
