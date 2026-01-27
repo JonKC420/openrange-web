@@ -1,6 +1,18 @@
 "use client";
 import React from "react";
 
+const MAINNET_LAUNCH = "Friday • Jan 30, 2026 • 8:00 PM CT";
+
+// Update these when ready (safe to leave as placeholders tonight)
+const LINKS = {
+  discord: "https://discord.gg/kHYVVryA",
+  github: "https://github.com/JonKC420",
+  x: "https://x.com/", // <-- put your X profile link here
+  explorer: "#", // e.g. https://explorer.openrange.xyz
+  rpcWs: "#", // e.g. wss://rpc.openrange.xyz
+  rpcHttp: "#", // e.g. https://rpc.openrange.xyz
+};
+
 export default function Page() {
   return (
     <main className="min-h-screen">
@@ -8,6 +20,14 @@ export default function Page() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Hero />
+
+        <Section
+          id="economics"
+          title="Economics"
+          subtitle="Transparent incentives. Built for miners, sustainable for the network."
+        >
+          <Economics />
+        </Section>
 
         <Section
           id="how"
@@ -18,9 +38,17 @@ export default function Page() {
         </Section>
 
         <Section
+          id="testing"
+          title="Stress testing & performance"
+          subtitle="We build under load first — then publish receipts."
+        >
+          <TestingResults />
+        </Section>
+
+        <Section
           id="get-started"
           title="Get started"
-          subtitle="Run an OPR node, then point your miner at your RPC. We’ll replace the placeholders with official release links closer to launch."
+          subtitle="Node + miner guides will be published as copy/paste scripts for mainnet. Placeholders below will be replaced with verified release links during launch week."
         >
           <GetStarted />
         </Section>
@@ -66,9 +94,9 @@ function Section({
           </div>
 
           <div className="mt-4 md:mt-0 flex flex-wrap gap-2 text-xs text-slate-300">
-            <Pill>OPR: PoW Settlement</Pill>
-            <Pill>OPRX: Fast Execution</Pill>
-            <Pill>Explorer + Testnet next</Pill>
+            <Pill>PoW Settlement (OPR)</Pill>
+            <Pill>Fast Execution (OPRX)</Pill>
+            <Pill>Mainnet: {MAINNET_LAUNCH}</Pill>
           </div>
         </div>
 
@@ -119,8 +147,14 @@ function Header() {
         </a>
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-slate-200">
+          <a className="hover:text-white" href="#economics">
+            Economics
+          </a>
           <a className="hover:text-white" href="#how">
             How it works
+          </a>
+          <a className="hover:text-white" href="#testing">
+            Testing
           </a>
           <a className="hover:text-white" href="#get-started">
             Get started
@@ -159,7 +193,7 @@ function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-orange-500/15 px-4 py-1 text-xs text-orange-200 ring-1 ring-orange-400/20">
             <span className="h-2 w-2 rounded-full bg-orange-400" />
-            Live PoW chain • L1 + L2
+            Mainnet launches • {MAINNET_LAUNCH}
           </span>
 
           <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
@@ -184,6 +218,17 @@ function Hero() {
             .
           </p>
 
+          <div className="mt-6 rounded-2xl bg-black/40 p-4 ring-1 ring-white/10">
+            <div className="text-sm font-semibold text-white">
+              🚀 Launch-week readiness
+            </div>
+            <div className="mt-1 text-sm text-slate-300">
+              Production servers are deployed (bootnode + RPC/explorer). We’re
+              finalizing mainnet config, verifying fee pots, and preparing
+              copy/paste tutorials for nodes and miners.
+            </div>
+          </div>
+
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#get-started"
@@ -192,17 +237,17 @@ function Hero() {
               Get started
             </a>
             <a
-              href="#how"
+              href="#economics"
               className="rounded-2xl bg-white/10 px-6 py-4 text-white font-semibold hover:bg-white/20 ring-1 ring-white/10"
             >
-              Learn How it Works
+              View Economics
             </a>
           </div>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             <MiniStat k="Consensus" v="Proof-of-Work (OPR)" />
-            <MiniStat k="Execution" v="Fast L2 (OPRX)" />
-            <MiniStat k="Supply" v="50M cap (OPR)" />
+            <MiniStat k="Mining" v="CPU/GPU friendly" />
+            <MiniStat k="Supply" v="56M cap (OPR)" />
             <MiniStat k="Blocks" v="~3 minutes target" />
           </div>
         </div>
@@ -210,7 +255,9 @@ function Hero() {
         {/* Right card */}
         <div className="rounded-3xl bg-gradient-to-b from-white/[0.07] to-white/[0.03] p-7 md:p-9 backdrop-blur shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
           <div className="flex items-center justify-between">
-            <div className="text-sm font-semibold text-white">Network Snapshot</div>
+            <div className="text-sm font-semibold text-white">
+              Network Snapshot
+            </div>
             <div className="text-xs text-slate-300"></div>
           </div>
 
@@ -227,11 +274,25 @@ function Hero() {
           </div>
 
           <div className="mt-6 rounded-2xl bg-black/30 p-5">
-            <div className="text-xs text-slate-300">One-liner for X</div>
-            <div className="mt-2 text-sm text-white">
-              Open Range is Live PoW (OPR) + a Fast L2 (OPRX). Explorer + Public
-              Testnet next.
+            <div className="text-sm font-semibold text-white">
+              What’s live / what’s next
             </div>
+            <div className="mt-2 text-sm text-slate-300 leading-relaxed">
+              <span className="text-white font-semibold">OPR (L1)</span> is the
+              PoW settlement layer.{" "}
+              <span className="text-white font-semibold">OPRX (L2)</span> is the
+              fast execution layer planned for DeFi and high-speed activity.
+              <div className="mt-3">
+                Next up: publish verified downloads + public RPC/explorer
+                endpoints, then lock in final mainnet configuration.
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-300">
+            <Pill>Bootnode + RPC servers deployed</Pill>
+            <Pill>Docs & scripts coming this week</Pill>
+            <Pill>Mainnet countdown</Pill>
           </div>
         </div>
       </div>
@@ -270,6 +331,38 @@ function FlowRow({
 
 /* ---------- sections ---------- */
 
+function Economics() {
+  return (
+    <div className="grid gap-4 md:grid-cols-3">
+      <Step
+        n="01"
+        title="Fixed supply"
+        text="OPR has a capped supply (56M). Emissions follow a transparent schedule designed for long-term sustainability."
+      />
+      <Step
+        n="02"
+        title="Mining incentives"
+        text="PoW secures the base layer. Designed to remain accessible to everyday miners (CPU/GPU)."
+      />
+      <Step
+        n="03"
+        title="Fee pots"
+        text="Transaction fees flow through on-chain accounting and are distributed by protocol (miners / stakers / burn)."
+      />
+
+      <div className="md:col-span-3 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
+        <div className="text-sm font-semibold text-white">
+          Launch-week disclosure
+        </div>
+        <p className="mt-2 text-slate-300">
+          Before mainnet goes live we will publish the finalized fee split
+          percentages and verify pot behavior on-chain with real transactions.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function HowItWorks() {
   return (
     <div className="grid gap-4 md:grid-cols-3">
@@ -292,8 +385,40 @@ function HowItWorks() {
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6">
         <div className="text-sm font-semibold text-white">Simple mental model</div>
         <p className="mt-2 text-slate-300">
-          <span className="font-semibold text-white">OPR</span> = secure settlement •{" "}
-          <span className="font-semibold text-white">OPRX</span> = fast execution for DeFi.
+          <span className="font-semibold text-white">OPR</span> = secure
+          settlement •{" "}
+          <span className="font-semibold text-white">OPRX</span> = fast
+          execution for DeFi.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function TestingResults() {
+  return (
+    <div className="grid gap-4 md:grid-cols-3">
+      <Step
+        n="01"
+        title="Throughput under load"
+        text="Internal stress tests validated high transaction throughput while maintaining stable block production."
+      />
+      <Step
+        n="02"
+        title="Mempool control"
+        text="Even when pending transactions build up, the pool clears rapidly once blocks are produced and tuned correctly."
+      />
+      <Step
+        n="03"
+        title="Production infrastructure"
+        text="Dedicated bootnode + RPC/explorer servers deployed so the network can operate in real-world conditions."
+      />
+
+      <div className="md:col-span-3 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
+        <div className="text-sm font-semibold text-white">Launch week updates</div>
+        <p className="mt-2 text-slate-300">
+          We’ll post screenshots/log excerpts and finalized benchmark numbers
+          during launch week as part of transparent mainnet readiness reporting.
         </p>
       </div>
     </div>
@@ -310,47 +435,74 @@ function Step({ n, title, text }: { n: string; title: string; text: string }) {
   );
 }
 
-/* ---------- Get Started (soft-block builder commands) ---------- */
+/* ---------- Get Started (mainnet-ready placeholders) ---------- */
 
 function GetStarted() {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <div className="md:col-span-2 rounded-2xl bg-orange-500/10 p-4 ring-1 ring-orange-400/20">
-        <div className="text-sm font-semibold text-orange-200">Testnet notice</div>
+        <div className="text-sm font-semibold text-orange-200">
+          Mainnet prep notice
+        </div>
         <p className="mt-1 text-sm text-slate-200">
-          Open Range is in <span className="font-semibold text-white">testnet development</span>. These instructions are
-          for builders testing locally. Official downloads + verified releases will be posted with public testnet.
+          Open Range is in{" "}
+          <span className="font-semibold text-white">
+            final pre-mainnet testing
+          </span>
+          . Verified downloads, checksums, and copy/paste scripts for running a
+          node and mining will be published before launch.
         </p>
       </div>
 
       <BuildCard
         title="Run a node"
-        desc="Builder instructions (testnet/dev). Replace the repo link with your official GitHub when ready."
-        code={`git clone https://github.com/<YOUR_ORG>/openrange-chain.git
+        desc="Mainnet-ready structure. Swap placeholders with the official chain spec + bootnodes + release binaries during launch week."
+        code={`# Option A (recommended): Verified release (coming during launch week)
+# ${LINKS.github}/openrange-chain/releases
+
+# Option B: Build from source
+git clone ${LINKS.github}/openrange-chain.git
 cd openrange-chain
 SKIP_WASM_BUILD=1 cargo build -p solochain-template-node --release
-./target/release/solochain-template-node --dev --execution Native --tmp --rpc-external --unsafe-rpc-external`}
+
+# Run (replace <MAINNET_SPEC.json> and ports as published)
+./target/release/solochain-template-node \\
+  --chain <MAINNET_SPEC.json> \\
+  --name "<YOUR_NODE_NAME>" \\
+  --port 30333 \\
+  --rpc-port 9933 \\
+  --ws-port 9944`}
         foot={
           <>
-            RPC example: <span className="text-white">ws://127.0.0.1:9944</span>
+            RPC (example): <span className="text-white">ws://127.0.0.1:9944</span>
           </>
         }
       />
 
       <BuildCard
         title="Start mining"
-        desc="Builder instructions (testnet/dev). Replace placeholder commands with your official miner package when ready."
-        code={`export OPR_RPC="ws://127.0.0.1:9944"
-cd openrange-miner
+        desc="Miner quick-start. Replace the RPC endpoint with the published public RPC (or your own node RPC) at launch."
+        code={`# Use a public RPC (launch week) or point at your own node RPC:
+export OPR_WS="${LINKS.rpcWs}"
+
+# Example miner workflow (replace with official repo/path if different):
+cd opr-miner
 npm i
-node miner.js --ws $OPR_RPC`}
+node miner.js --ws "$OPR_WS"`}
+        foot={
+          <>
+            Tip: miners will work best against a local/full node RPC once you’re
+            synced.
+          </>
+        }
       />
 
-      <div className="md:col-span-2 rounded-3xl bg-black/25 p-6">
-        <div className="text-sm font-semibold text-white">Next steps</div>
+      <div className="md:col-span-2 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
+        <div className="text-sm font-semibold text-white">What’s coming next</div>
         <p className="mt-2 text-slate-300">
-          Verified downloads (Linux/Windows), checksums, and quick-start scripts will be published with the first public
-          testnet release.
+          Before launch we will publish: bootnode addresses, public RPC
+          endpoints, explorer URL, verified binaries (Linux/Windows), checksums,
+          and one-click scripts.
         </p>
       </div>
     </div>
@@ -375,7 +527,7 @@ function BuildCard({
 
       <details className="mt-4 group">
         <summary className="cursor-pointer select-none rounded-xl bg-white/10 px-4 py-3 text-sm font-semibold text-white hover:bg-white/20 ring-1 ring-white/10">
-          Show builder instructions
+          Show quick-start
         </summary>
 
         <div className="mt-4">
@@ -397,10 +549,22 @@ function CodeBlock({ code }: { code: string }) {
 
 function Roadmap() {
   const items = [
-    { title: "Explorer v1", text: "Public explorer with blocks, transactions, and network stats." },
-    { title: "Public testnet", text: "Docs + faucet + packaged node/miner for the community." },
-    { title: "OPRX plumbing", text: "Deposit/mint/withdraw flow + relayer hardening." },
-    { title: "DeFi apps", text: "Swap UI + charts + bridge UI + staking dashboard." },
+    {
+      title: "Explorer v1",
+      text: "Public explorer with blocks, transactions, and network stats.",
+    },
+    {
+      title: "Public RPC + onboarding",
+      text: "Official endpoints, quick-start scripts, and step-by-step tutorials.",
+    },
+    {
+      title: "OPRX plumbing",
+      text: "Deposit/mint/withdraw flow + relayer hardening.",
+    },
+    {
+      title: "DeFi apps",
+      text: "Swap UI + charts + bridge UI + staking dashboard.",
+    },
   ];
 
   return (
@@ -424,10 +588,26 @@ function Footer() {
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <div className="text-sm font-semibold text-white">Open Range</div>
-            <div className="mt-1 text-xs text-slate-400">OPR (L1 PoW) • OPRX (L2 fast execution)</div>
+            <div className="mt-1 text-xs text-slate-400">
+              OPR (L1 PoW) • OPRX (L2 fast execution)
+            </div>
+
+            <div className="mt-3 flex flex-wrap gap-4 text-sm text-slate-300">
+              <a className="hover:text-white" href={LINKS.discord} target="_blank" rel="noreferrer">
+                Discord
+              </a>
+              <a className="hover:text-white" href={LINKS.github} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <a className="hover:text-white" href={LINKS.x} target="_blank" rel="noreferrer">
+                X
+              </a>
+            </div>
           </div>
 
-          <div className="text-xs text-slate-500">© {new Date().getFullYear()} Open Range</div>
+          <div className="text-xs text-slate-500">
+            © {new Date().getFullYear()} Open Range
+          </div>
         </div>
       </div>
     </footer>
