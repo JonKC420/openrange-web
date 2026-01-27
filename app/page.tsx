@@ -227,7 +227,7 @@ function Hero() {
           </div>
 
           <div className="mt-6 rounded-2xl bg-black/30 p-5">
-            <div className="text-xs text-slate-300">One-liner for X</div>
+            <div className="text-xs text-slate-300"></div>
             <div className="mt-2 text-sm text-white">
               Open Range is Live PoW (OPR) + a Fast L2 (OPRX). Explorer + Public
               Testnet next.
