@@ -556,7 +556,7 @@ function Roadmap() {
    {
   title: "Explorer V1",
   text: "Public Explorer With Blocks, Transactions, and Network Stats.",
-  progress: 100%,
+  progress: 100,
   status: "Completed",
 },
 
