@@ -348,7 +348,7 @@ text="OPR Has a Capped Supply of 56 million. Emissions Follow a Transparent Sche
       <Step
         n="03"
         title="Fee Pots"
-        text="Transaction Fees Flow Through On-Chain Accounting and Are Distributed By Protocol (Miners / Stakers / Burn)."
+        text="Transaction Fees Flow Through On-Chain Accounting and Are Distributed By Protocol (Miners 50% / Stakers 25% / Burn 25%)."
       />
 
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
