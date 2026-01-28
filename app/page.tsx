@@ -246,9 +246,9 @@ function Hero() {
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             <MiniStat k="Consensus" v="Proof-of-Work (OPR)" />
-            <MiniStat k="Mining" v="CPU/GPU friendly" />
-            <MiniStat k="Supply" v="56M cap (OPR)" />
-            <MiniStat k="Blocks" v="~3 minutes target" />
+            <MiniStat k="Mining" v="Designed For CPU & GPU Mining" />
+            <MiniStat k="Supply" v="56 Million Max Supply (OPR)" />
+            <MiniStat k="Blocks" v="~3 minute Target" />
           </div>
         </div>
 
