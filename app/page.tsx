@@ -248,7 +248,7 @@ function Hero() {
             <MiniStat k="Consensus" v="Proof-of-Work (OPR)" />
             <MiniStat k="Mining" v="Designed For CPU & GPU Mining" />
             <MiniStat k="Supply" v="56 Million Max Supply (OPR)" />
-            <MiniStat k="Blocks" v="~3 minute Target" />
+            <MiniStat k="Blocks" v="~3 Minute Target" />
           </div>
         </div>
 
@@ -369,8 +369,9 @@ function HowItWorks() {
     <div className="grid gap-4 md:grid-cols-3">
       <Step
         n="01"
-        title="Mine & Secure OPR (L1)"
-        text="OPR Stays Focused On PoW Security and Settlement. Stable Block Production, Fair Mining, Simple Core Layer."
+       title="Mine & Secure OPR (L1)"
+      text="OPR Focuses on Proof-of-Work Security and Settlement, Delivering Stable Block Production and a Robust Base Layer."
+
       />
       <Step
         n="02"
@@ -552,10 +553,13 @@ function CodeBlock({ code }: { code: string }) {
 
 function Roadmap() {
   const items = [
-    {
-      title: "Explorer V1",
-      text: "Public Explorer With Blocks, Transactions, and Network Stats.",
-    },
+   {
+  title: "Explorer V1",
+  text: "Public Explorer With Blocks, Transactions, and Network Stats.",
+  progress: 100%,
+  status: "Completed",
+},
+
     {
       title: "Public RPC + Onboarding",
       text: "Official Endpoints, Quick-Start Scripts, and Step-by-Step Tutorials.",
