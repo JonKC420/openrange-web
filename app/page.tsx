@@ -221,12 +221,11 @@ function Hero() {
 
           <div className="mt-6 rounded-2xl bg-black/40 p-4 ring-1 ring-white/10">
             <div className="text-sm font-semibold text-white">
-              🚀 Launch-Week Readiness
+              🚀 Open Range (OPR) L1 is Set For Launch 🚀
             </div>
             <div className="mt-1 text-sm text-slate-300">
-              Production Servers are Deployed (Bootnode + RPC/Explorer). We’re
-              Finalizing Mainnet Config, Verifying Fee Pots, and Preparing
-              Copy/Paste Tutorials For Nodes and Miners.
+              The Initial Release Focuses On OPR (L1) Stability, Mining, and Settlement.
+              OPRX L2 Will Be Introduced in a Later Phase Once L1 is Fully Established.
             </div>
           </div>
 
