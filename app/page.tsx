@@ -202,18 +202,18 @@ function Hero() {
           </h1>
 
           <p className="mt-5 text-base md:text-lg text-slate-300 max-w-xl leading-relaxed">
-            Open Range is a two-layer system designed for{" "}
-            <span className="text-white font-semibold">security</span>,{" "}
-            <span className="text-white font-semibold">scalability</span>, and{" "}
-            <span className="text-white font-semibold">clarity</span>.
+            Open Range is a Two-Layer System Designed For{" "}
+            <span className="text-white font-semibold">Security</span>,{" "}
+            <span className="text-white font-semibold">Scalability</span>, and{" "}
+            <span className="text-white font-semibold">Clarity</span>.
             <br />
-            <span className="text-white font-semibold">OPR</span> anchors the
-            network with Proof-of-Work, while{" "}
-            <span className="text-white font-semibold">OPRX</span> enables fast
-            execution for{" "}
+            <span className="text-white font-semibold">OPR</span> Anchors The
+            Network with Proof-of-Work, While{" "}
+            <span className="text-white font-semibold">OPRX</span> Enables Fast
+            Execution For{" "}
             <span className="text-white font-semibold">DeFi</span> and{" "}
             <span className="text-white font-semibold">
-              peer-to-peer transactions
+              Peer-to-Peer Transactions
             </span>
             .
           </p>
