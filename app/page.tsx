@@ -405,7 +405,7 @@ function TestingResults() {
       <Step
         n="01"
        title="Transaction Speed"
-      text="Internal Stress Tests Validated Sustained Throughput of 30–40k Transactions Per Minute While Maintaining Stable Block Production."
+      text="Internal Stress Tests Validated Sustained Throughput of 20–40k Transactions Per Minute While Maintaining Stable Block Production."
 
       />
       <Step
