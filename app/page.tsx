@@ -7,7 +7,7 @@ const MAINNET_LAUNCH = "Friday • Jan 30, 2026 • 8:00 PM CT";
 const LINKS = {
   discord: "https://discord.gg/kHYVVryA",
   github: "https://github.com/JonKC420",
-  x: "https://x.com/", // <-- put your X profile link here
+  x: "https://x.com/OpenRangeGuide", // <-- put your X profile link here
   explorer: "#", // e.g. https://explorer.openrange.xyz
   rpcWs: "#", // e.g. wss://rpc.openrange.xyz
   rpcHttp: "#", // e.g. https://rpc.openrange.xyz
@@ -24,15 +24,16 @@ export default function Page() {
         <Section
           id="economics"
           title="Economics"
-          subtitle="Transparent incentives. Built for miners, sustainable for the network."
+          subtitle="Transparent Incentives. Built for Miners, Sustainable For The Network."
         >
           <Economics />
         </Section>
 
         <Section
           id="how"
-          title="How OPR + OPRX work together"
-          subtitle="Secure PoW settlement on L1. Fast execution on L2. Two layers. One clean system."
+          title="How OPR + OPRX Work Together"
+          subtitle="OPR Provides Proof-of-Work Settlement and Security, While OPRX Enables High-Throughput Execution Anchored To L1 Finality."
+
         >
           <HowItWorks />
         </Section>
@@ -40,7 +41,7 @@ export default function Page() {
         <Section
           id="testing"
           title="Stress testing & performance"
-          subtitle="We build under load first — then publish receipts."
+          subtitle="We Build Under Load First — Then Publish Receipts."
         >
           <TestingResults />
         </Section>
