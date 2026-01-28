@@ -336,18 +336,19 @@ function Economics() {
     <div className="grid gap-4 md:grid-cols-3">
       <Step
         n="01"
-        title="Fixed supply"
-        text="OPR has a capped supply (56M). Emissions follow a transparent schedule designed for long-term sustainability."
+        title="Fixed Supply"
+text="OPR Has a Capped Supply of 56 million. Emissions Follow a Transparent Schedule With Halvings Every 4 years, Designed For Long-Term Sustainability."
+
       />
       <Step
         n="02"
-        title="Mining incentives"
-        text="PoW secures the base layer. Designed to remain accessible to everyday miners (CPU/GPU)."
+        title="Mining Incentives"
+        text="PoW Secures The Base Layer. Designed To Remain Accessible To Everyday Miners (CPU/GPU)."
       />
       <Step
         n="03"
-        title="Fee pots"
-        text="Transaction fees flow through on-chain accounting and are distributed by protocol (miners / stakers / burn)."
+        title="Fee Pots"
+        text="Transaction Fees Flow Through On-Chain Accounting and Are Distributed By Protocol (Miners / Stakers / Burn)."
       />
 
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
@@ -369,17 +370,17 @@ function HowItWorks() {
       <Step
         n="01"
         title="Mine & Secure OPR (L1)"
-        text="OPR stays focused on PoW security and settlement. Stable block production, fair mining, simple core layer."
+        text="OPR Stays Focused On PoW Security and Settlement. Stable Block Production, Fair Mining, Simple Core Layer."
       />
       <Step
         n="02"
-        title="Move value into OPRX (L2)"
-        text="Deposit/bridge into OPRX to unlock low-cost transfers, swaps, and DeFi activity at high speed."
+        title="Move Value Into OPRX (L2)"
+        text="Deposit/Bridge Into OPRX To Unlock Low-Cost Transfers, Swaps, and DeFi Activity at High Speed."
       />
       <Step
         n="03"
-        title="Withdraw back to PoW settlement"
-        text="When you need L1 settlement, withdraw back to OPR — anchored by PoW finality."
+        title="Withdraw Back To PoW Settlement"
+        text="When You Need L1 Settlement, Withdraw Back To OPR — Anchored By PoW Finality."
       />
 
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6">
@@ -402,18 +403,20 @@ function TestingResults() {
     <div className="grid gap-4 md:grid-cols-3">
       <Step
         n="01"
-        title="Throughput under load"
-        text="Internal stress tests validated high transaction throughput while maintaining stable block production."
+       title="Transaction Speed"
+      text="Internal Stress Tests Validated Sustained Throughput of 30–40k Transactions Per Minute While Maintaining Stable Block Production."
+
       />
       <Step
         n="02"
-        title="Mempool control"
-        text="Even when pending transactions build up, the pool clears rapidly once blocks are produced and tuned correctly."
+      title="Mempool Control"
+      text="Even With Several Thousand Transactions Queued In The Mempool, The Network Clears The Backlog Quickly Without Stalling Block Production."
+
       />
       <Step
         n="03"
-        title="Production infrastructure"
-        text="Dedicated bootnode + RPC/explorer servers deployed so the network can operate in real-world conditions."
+        title="Production Infrastructure"
+        text="Dedicated Bootnode + RPC/Explorer Servers Deployed So The Network Can Operate In Real-World Conditions."
       />
 
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
