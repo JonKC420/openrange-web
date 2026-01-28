@@ -220,12 +220,12 @@ function Hero() {
 
           <div className="mt-6 rounded-2xl bg-black/40 p-4 ring-1 ring-white/10">
             <div className="text-sm font-semibold text-white">
-              🚀 Launch-week readiness
+              🚀 Launch-Week Readiness
             </div>
             <div className="mt-1 text-sm text-slate-300">
-              Production servers are deployed (bootnode + RPC/explorer). We’re
-              finalizing mainnet config, verifying fee pots, and preparing
-              copy/paste tutorials for nodes and miners.
+              Production Servers are Deployed (Bootnode + RPC/Explorer). We’re
+              Finalizing Mainnet Config, Verifying Fee Pots, and Preparing
+              Copy/Paste Tutorials For Nodes and Miners.
             </div>
           </div>
 
@@ -234,7 +234,7 @@ function Hero() {
               href="#get-started"
               className="glow rounded-2xl bg-orange-500 px-6 py-4 text-black font-semibold hover:bg-orange-400"
             >
-              Get started
+              Get Started
             </a>
             <a
               href="#economics"
@@ -275,24 +275,24 @@ function Hero() {
 
           <div className="mt-6 rounded-2xl bg-black/30 p-5">
             <div className="text-sm font-semibold text-white">
-              What’s live / what’s next
+              What’s Live / What’s Next
             </div>
             <div className="mt-2 text-sm text-slate-300 leading-relaxed">
-              <span className="text-white font-semibold">OPR (L1)</span> is the
-              PoW settlement layer.{" "}
-              <span className="text-white font-semibold">OPRX (L2)</span> is the
-              fast execution layer planned for DeFi and high-speed activity.
+              <span className="text-white font-semibold">OPR (L1)</span> is The
+              PoW Settlement Layer.{" "}
+              <span className="text-white font-semibold">OPRX (L2)</span> is The
+              Fast Execution Layer Planned For DeFi and High-Speed Activity.
               <div className="mt-3">
-                Next up: publish verified downloads + public RPC/explorer
-                endpoints, then lock in final mainnet configuration.
+                Next Up: Publish Verified Downloads + Public RPC/Explorer
+                Endpoints, Then Lock in Final Mainnet Configuration.
               </div>
             </div>
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-300">
-            <Pill>Bootnode + RPC servers deployed</Pill>
-            <Pill>Docs & scripts coming this week</Pill>
-            <Pill>Mainnet countdown</Pill>
+            <Pill>Bootnode + RPC Servers Deployed</Pill>
+            <Pill>Docs & Scripts Coming This Week</Pill>
+            <Pill>Mainnet Countdown</Pill>
           </div>
         </div>
       </div>
@@ -352,11 +352,11 @@ function Economics() {
 
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
         <div className="text-sm font-semibold text-white">
-          Launch-week disclosure
+          Launch-Week Disclosure
         </div>
         <p className="mt-2 text-slate-300">
-          Before mainnet goes live we will publish the finalized fee split
-          percentages and verify pot behavior on-chain with real transactions.
+          Before Mainnet Goes Live We Will Publish the Finalized Fee Split
+          Percentages and Verify Pot Behavior On-Chain With Real Transactions.
         </p>
       </div>
     </div>
@@ -384,13 +384,13 @@ function HowItWorks() {
 
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6">
         <div className="text-sm font-semibold text-white">
-          Simple mental model
+          Simple Mental Model
         </div>
         <p className="mt-2 text-slate-300">
-          <span className="font-semibold text-white">OPR</span> = secure
-          settlement •{" "}
-          <span className="font-semibold text-white">OPRX</span> = fast
-          execution for DeFi.
+          <span className="font-semibold text-white">OPR</span> = Secure
+          Settlement •{" "}
+          <span className="font-semibold text-white">OPRX</span> = Fast
+          Execution For DeFi.
         </p>
       </div>
     </div>
@@ -417,7 +417,7 @@ function TestingResults() {
       />
 
       <div className="md:col-span-3 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
-        <div className="text-sm font-semibold text-white">Launch week updates</div>
+        <div className="text-sm font-semibold text-white">Launch Week Updates</div>
         <p className="mt-2 text-slate-300">
           We’ll post screenshots/log excerpts and finalized benchmark numbers
           during launch week as part of transparent mainnet readiness reporting.
@@ -444,15 +444,15 @@ function GetStarted() {
     <div className="grid gap-4 md:grid-cols-2">
       <div className="md:col-span-2 rounded-2xl bg-orange-500/10 p-4 ring-1 ring-orange-400/20">
         <div className="text-sm font-semibold text-orange-200">
-          Mainnet prep notice
+          Mainnet Prep Notice
         </div>
         <p className="mt-1 text-sm text-slate-200">
           Open Range is in{" "}
           <span className="font-semibold text-white">
-            final pre-mainnet testing
+            Final Pre-Mainnet Testing
           </span>
-          . Verified downloads, checksums, and copy/paste scripts for running a
-          node and mining will be published before launch.
+          . Verified Downloads, Checksums, and Copy/Paste Scripts for Running a
+          Node and Mining Will Be Published Before Launch.
         </p>
       </div>
 
@@ -493,16 +493,16 @@ cd opr-miner
 npm i
 node miner.js --ws "$OPR_WS"`}
         foot={
-          <>Tip: miners will work best against a local/full node RPC once you’re synced.</>
+          <>Tip: Miners Will Work Best Against a Local/Full Node RPC Once You’re Synced.</>
         }
       />
 
       <div className="md:col-span-2 rounded-3xl bg-black/25 p-6 ring-1 ring-white/10">
-        <div className="text-sm font-semibold text-white">What’s coming next</div>
+        <div className="text-sm font-semibold text-white">What’s Coming Next</div>
         <p className="mt-2 text-slate-300">
-          Before launch we will publish: bootnode addresses, public RPC
-          endpoints, explorer URL, verified binaries (Linux/Windows), checksums,
-          and one-click scripts.
+          Before Launch We Will Publish: Bootnode Addresses, Public RPC
+          Endpoints, Explorer URL, Verified Binaries (Linux/Windows), Checksums,
+          and One-Click Scripts.
         </p>
       </div>
     </div>
@@ -550,20 +550,20 @@ function CodeBlock({ code }: { code: string }) {
 function Roadmap() {
   const items = [
     {
-      title: "Explorer v1",
-      text: "Public explorer with blocks, transactions, and network stats.",
+      title: "Explorer V1",
+      text: "Public Explorer With Blocks, Transactions, and Network Stats.",
     },
     {
-      title: "Public RPC + onboarding",
-      text: "Official endpoints, quick-start scripts, and step-by-step tutorials.",
+      title: "Public RPC + Onboarding",
+      text: "Official Endpoints, Quick-Start Scripts, and Step-by-Step Tutorials.",
     },
     {
-      title: "OPRX plumbing",
-      text: "Deposit/mint/withdraw flow + relayer hardening.",
+      title: "OPRX Plumbing",
+      text: "Deposit/Mint/Withdraw Flow + Relayer Hardening.",
     },
     {
-      title: "DeFi apps",
-      text: "Swap UI + charts + bridge UI + staking dashboard.",
+      title: "DeFi Apps",
+      text: "Swap UI + Charts + Bridge UI + Staking Dashboard.",
     },
   ];
 
@@ -589,7 +589,7 @@ function Footer() {
           <div>
             <div className="text-sm font-semibold text-white">Open Range</div>
             <div className="mt-1 text-xs text-slate-400">
-              OPR (L1 PoW) • OPRX (L2 fast execution)
+              OPR (L1 PoW) • OPRX (L2 DeFi)
             </div>
 
             <div className="mt-3 flex flex-wrap gap-4 text-sm text-slate-300">
