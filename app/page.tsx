@@ -554,24 +554,30 @@ function CodeBlock({ code }: { code: string }) {
 
 function Roadmap() {
   const items = [
-   {
-  title: "Explorer V1",
-  text: "Public Explorer With Blocks, Transactions, and Network Stats.",
-  progress: 100,
-  status: "Completed",
-},
-
+    {
+      title: "Explorer V1",
+      text: "Public Explorer With Blocks, Transactions, and Network Stats.",
+      progress: 100,
+      status: "Completed",
+    },
     {
       title: "Public RPC + Onboarding",
       text: "Official Endpoints, Quick-Start Scripts, and Step-by-Step Tutorials.",
+      progress: 75,
+      status: "In Progress",
     },
     {
-      title: "OPRX Plumbing",
+      title: "OPRX Core Infrastructure",
       text: "Deposit/Mint/Withdraw Flow + Relayer Hardening.",
+
+      progress: 50,
+      status: "In Progress",
     },
     {
       title: "DeFi Apps",
       text: "Swap UI + Charts + Bridge UI + Staking Dashboard.",
+      progress: 15,
+      status: "Planned",
     },
   ];
 
@@ -579,8 +585,30 @@ function Roadmap() {
     <div className="grid gap-4 md:grid-cols-2">
       {items.map((i) => (
         <div key={i.title} className="rounded-3xl bg-white/5 p-6">
-          <div className="text-lg font-semibold text-white">{i.title}</div>
-          <div className="mt-2 text-slate-300">{i.text}</div>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <div className="text-lg font-semibold text-white">{i.title}</div>
+              <div className="mt-2 text-slate-300">{i.text}</div>
+            </div>
+
+            <span className="shrink-0 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-slate-200 ring-1 ring-white/10">
+              {i.status}
+            </span>
+          </div>
+
+          <div className="mt-5">
+            <div className="mb-2 flex items-center justify-between text-xs text-slate-400">
+              <span>Progress</span>
+              <span className="text-slate-300">{i.progress}%</span>
+            </div>
+
+            <div className="h-2 w-full overflow-hidden rounded-full bg-black/40 ring-1 ring-white/10">
+              <div
+                className="h-full rounded-full bg-orange-500"
+                style={{ width: `${i.progress}%` }}
+              />
+            </div>
+          </div>
         </div>
       ))}
     </div>
